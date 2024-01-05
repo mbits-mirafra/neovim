@@ -1,5 +1,5 @@
-# neovim
-This project is created to arrange and align different nvim editor plugins to make the DesignVerification tasks faster. 
+# neovim <img src = "https://github.com/mbits-mirafra/neovim/assets/67193041/bd6e99f2-f2e4-4a19-b472-b7895a8ddec2" align = "left" width = "4%" height = "4%">
+This project is created to arrange and align different nvim editor plugins to make the DesignVerification tasks faster.
 ## Introduction:
 This is a custom configuration of NeoVim based on [LazyVim](https://github.com/LazyVim/LazyVim). It contains all the default features of LazyVim and more.
 ## Features:
