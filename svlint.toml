@@ -1,0 +1,6 @@
+[option]
+style_textwidth = 100
+
+[rules]
+multiline_for_begin = true
+multiline_if_begin = true
