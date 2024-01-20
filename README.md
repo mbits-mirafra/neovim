@@ -115,4 +115,13 @@ Fold-preview allows you to preview closed folds, without opening them. <br> **Ho
 ![image](https://github.com/mbits-mirafra/neovim/assets/67193041/77e65275-a6dd-411f-b02a-293aa38eb8ba) <br>
 ⚠️ PLEASE WAIT FOR SVLS TO FINISH INSTALLING <br>
 Note: The LSPs only get activated inside git repositories. If you do not wish to create a repository, you can add a dummy .git folder to your working directory.
-6. The required LSP configurations for svls ``.svlint.toml`` and verible ``.rules.verible_lint`` are available in this repository. Copy and paste them to your working directory to enable them.
+6. The required LSP configurations for svls ``.svlint.toml`` and verible ``.rules.verible_lint`` are available in this repository. Copy and paste them to your working directory to enable them. For example:
+   ```bash
+   git clone https://github.com/mbits-mirafra/axi4_avip.git
+   cp neovim/.rules.verible_lint neovim/.svlint.toml axi4_avip/
+   ```
+   Without ``.svlint.toml`` and ``.rules.verible_lint`` the LSPs will enable all lint rules:
+   ![Screenshot from 2024-01-20 21-14-11](https://github.com/mbits-mirafra/neovim/assets/67193041/fd670228-797f-4f0b-b2f5-5e483d936230)
+   With ``.svlint.toml`` and ``.rules.verible_lint``:
+   ![image](https://github.com/mbits-mirafra/neovim/assets/67193041/7aeadaeb-a077-407b-a807-961fa3c49b1e)
+
