@@ -58,7 +58,7 @@ Fold-preview allows you to preview closed folds, without opening them. <br> **Ho
    ```
 ### 2. Cargo
    <img src = "https://crates.io/assets/cargo.png" width = "10%" height = "10%"> <br>
-   [svls](https://github.com/dalance/svls), [ripgrep](https://github.com/BurntSushi/ripgrep), [lazygit](https://github.com/jesseduffield/lazygit) require cargo. Cargo is the rust package manager.<br>
+   [svls](https://github.com/dalance/svls), [ripgrep](https://github.com/BurntSushi/ripgrep) require cargo. Cargo is the rust package manager.<br>
    #### Installation
    ```bash
    curl https://sh.rustup.rs -sSf | sh
