@@ -1,11 +1,11 @@
 # Neovim 
-This projects seeks to arrange and align different neovim editor plugins together to provide a _fast, seamless and feature-rich_ **IDE(Integrated Development Environment), for Design Verification**.
+This project seeks to arrange and align different neovim editor plugins together to provide a _fast, seamless and feature-rich_ **IDE(Integrated Development Environment), for Design Verification**.
 
 ## Introduction:
 _**Neovim is a hyperextensible Vim-based text editor that seeks to aggressively refactor Vim.**_
 
 What makes it stand out is the extensive support it provides for <i>[third party plugins](https://github.com/topics/neovim-plugins)</i>. And it does so with the help of [Lua scripts](https://neovim.io/doc/user/lua.html).
-This project consists of a custom configuration of NeoVim based on [LazyVim](https://www.lazyvim.org/) and contains LSP (Language Server Protocol) configuration files in compliance with the [best coding practices](https://github.com/muneebullashariff/best_coding_practices) for Design Verification. It contains all the features provided LazyVim and more.
+This project consists of a custom configuration of NeoVim based on [LazyVim](https://www.lazyvim.org/) and contains LSP (Language Server Protocol) configuration files in compliance with the [best coding practices](https://github.com/muneebullashariff/best_coding_practices) for Design Verification. It contains all the features provided by LazyVim and more.
 
 ## Features:
 ### LazyVim:
@@ -37,41 +37,71 @@ Fold-preview allows you to preview closed folds, without opening them. <br> **Ho
    #### Installation
    _Open terminal and paste the following commands:_
    ```bash
-   curl -LO https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage
-   chmod u+x nvim.appimage
-   mkdir bin
-   mv nvim.appimage bin/
+   cd   #go to home directory
+   curl -LO https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage   #download nvim
+   chmod u+x nvim.appimage   #make nvim executable
+   mkdir bin   #make a directory for binaries
+   mv nvim.appimage bin/   #move nvim to the bin directory
    ```
-   **For csh/tcsh:-** <br>
-   _Go to .cshrc:_
-   ```csh
-   vim ~/.cshrc
+   ⚠️ CHECK IF SHELL IS BASH OR CSH/TCSH
+   ```bash
+   echo $0
    ```
-   _Add neovim to path and give it an alias by adding these lines to the bottom of the file:_
+   ``/bin/csh`` : csh <br>
+   ``tcsh`` : tcsh <br>
+   ``/bin/bash`` : bash <br>
+   _Open your shell configuration file:_
    ```csh
-   setenv PATH $PATH\:$HOME/bin
+   vim ~/.cshrc   #for csh
+   vim ~/.bashrc   #for bash
+   vim ~/.tcshrc   #for tcsh
+   ```
+   _Add these lines to the bottom of the file:_
+   ```csh
+   #FOR CSH/TCSH
+   setenv PATH $PATH\:$HOME/bin   #adds bin directory to PATH variable
    alias nvim 'nvim.appimage'
+
+   #FOR BASH
+   export PATH=$PATH:$HOME/bin   #adds bin directory to PATH variable
+   alias nvim="nvim.appimage"
    ```
    _Exit vim and source the changes:_
    ```csh
-   source ~/.cshrc
+   source ~/.cshrc   #for csh/tcsh
+   source ~/.bashrc   #for bash
    ```
 ### 2. Cargo
    <img src = "https://crates.io/assets/cargo.png" width = "10%" height = "10%"> <br>
    [svls](https://github.com/dalance/svls), [ripgrep](https://github.com/BurntSushi/ripgrep) require cargo. Cargo is the rust package manager.<br>
    #### Installation
    ```bash
-   curl https://sh.rustup.rs -sSf | sh
+   which cargo   #check if cargo has been installed
+   #DO NOT EXECUTE THE NEXT COMMAND IF CARGO HAS BEEN INSTALLED
+   
+   curl https://sh.rustup.rs -sSf | sh   #script to install cargo
    ```
    #### Add cargo binaries to path
-   **For csh/tcsh:-** <br>
-   _Go to .cshrc:_
-   ```csh
-   vim ~/.cshrc
+   ⚠️ CHECK IF SHELL IS BASH OR CSH/TCSH
+   ```bash
+   echo $0
    ```
-   _Add cargo binaries to path by adding this line at the bottom of the file:_
+   ``/bin/csh`` : csh <br>
+   ``tcsh`` : tcsh <br>
+   ``/bin/bash`` : bash <br>
+   _Open your shell configuration file:_
    ```csh
-   setenv PATH $PATH\:$HOME/.cargo/bin
+   vim ~/.cshrc   #for csh
+   vim ~/.bashrc   #for bash
+   vim ~/.tcshrc   #for tcsh
+   ```
+   _Add this line at the bottom of the file:_
+   ```csh
+   #FOR CSH/TCSH
+   setenv PATH $PATH\:$HOME/.cargo/bin   #add cargo binaries directory to path
+
+   #FOR BASH
+   export PATH=$PATH:$HOME/.cargo/bin #add cargo binaries directory to path
    ```
    _Exit vim and source the changes:_
    ```csh
@@ -80,10 +110,12 @@ Fold-preview allows you to preview closed folds, without opening them. <br> **Ho
 ### 3. NerdFonts
    Nerd fonts are required for icons<br>
    <img src="https://github.com/mbits-mirafra/neovim/assets/67193041/28266af4-3bed-46bd-aa56-7e33b37b477e" width = "20%" height = "20%"> <br>
-   _**Download and install JetBrains**: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip_ <br>
+   _**Download the JetBrains font**: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip_ <br>
+   To install the Nerd font: <br>
    _WSL users, follow this guide: https://dev.to/ansonh/customize-beautify-your-windows-terminal-2022-edition-541l_ <br>
    _PuTTY users, follow this guide: https://linuxpip.org/increase-putty-font-size-tutorial/_ <br>
    _Fedora & Ubuntu users, follow this guide: https://itsfoss.com/change-terminal-font-ubuntu/_ <br>
+   More fonts can be installed from https://www.nerdfonts.com/font-downloads
 ### 4. Ripgrep
    Ripgrep is used to search for a keyword in every file in a given working directory.
    <img src ="https://burntsushi.net/stuff/ripgrep1.png" width = "50%" height = "50%"> <br>
@@ -96,6 +128,7 @@ Fold-preview allows you to preview closed folds, without opening them. <br> **Ho
    <img src ="https://github.com/jesseduffield/lazygit/blob/assets/demo/commit_and_push-compressed.gif" width = "50%" height = "50%"> <br>
    _Install Lazygit:_
    ```bash
+   cd   #go to home directory
    curl -Lo lazygit.tar.gz https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_Linux_x86_64.tar.gz
    tar xf lazygit.tar.gz lazygit
    install lazygit ~/bin/
@@ -108,6 +141,7 @@ Fold-preview allows you to preview closed folds, without opening them. <br> **Ho
    ```
 2. _Download and setup nvim config:_
    ```bash
+   cd   #go to home directory
    git clone https://github.com/mbits-mirafra/neovim.git
    cp -r neovim/nvim ~/.config/
    ```
@@ -117,6 +151,7 @@ Fold-preview allows you to preview closed folds, without opening them. <br> **Ho
 Note: The LSPs only get activated inside git repositories. If you do not wish to create a repository, you can add a dummy .git folder to your working directory.
 6. The required LSP configurations for svls ``.svlint.toml`` and verible ``.rules.verible_lint`` are available in this repository. Copy and paste them to your working directory to enable them. For example:
    ```bash
+   cd   #go to home directory
    git clone https://github.com/mbits-mirafra/axi4_avip.git
    cp neovim/.rules.verible_lint neovim/.svlint.toml axi4_avip/
    ```
