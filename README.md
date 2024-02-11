@@ -135,9 +135,8 @@ Fold-preview allows you to preview closed folds, without opening them. <br> **Ho
    _**Download the JetBrains font**: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip_ <br>
    To install the Nerd font: <br>
    _WSL users, follow this guide: https://dev.to/ansonh/customize-beautify-your-windows-terminal-2022-edition-541l_ <br>
-   _PuTTY users, follow this guide: https://linuxpip.org/increase-putty-font-size-tutorial/_ <br>
-   _Fedora & Ubuntu users, follow this guide: https://itsfoss.com/change-terminal-font-ubuntu/_ <br>
-   More fonts can be installed from https://www.nerdfonts.com/font-downloads
+   _Fedora & Ubuntu users, follow this guide: https://itsfoss.com/change-terminal-font-ubuntu/_ <br><br>
+   _More fonts can be installed from https://www.nerdfonts.com/font-downloads_
 ### 4. Ripgrep
    Ripgrep is used to search for a keyword in every file in a given working directory.
    <img src ="https://burntsushi.net/stuff/ripgrep1.png" width = "50%" height = "50%"> <br>
