@@ -38,8 +38,8 @@
 -module-filename
 -module-parameter
 -module-port
--no-tabs
--no-trailing-spaces
++no-tabs
++no-trailing-spaces
 -numeric-format-string-style
 -one-module-per-file
 -package-filename
