@@ -164,6 +164,7 @@ Fold-preview allows you to preview closed folds, without opening them. <br> **Ho
    ```bash
    cd
    git clone https://github.com/mbits-mirafra/neovim.git
+   mkdir -p ~/.config/nvim
    cp -r neovim/nvim/ ~/.config/nvim
    ```
 3. Launch nvim, enter command line mode(type ``:``) and type ``MasonInstall svls verible`` to install the SystemVerilog LSPs(Language Server Protocols).
